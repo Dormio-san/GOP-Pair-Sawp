@@ -107,8 +107,8 @@ public class WorldRowManager : MonoBehaviour
         int rand = Random.Range(0, 30);
         return rand switch
         {
-            < 9 => RowType.Grass,
-            < 21 => RowType.Road,
+            < 8 => RowType.Grass,
+            < 23 => RowType.Road,
             _ => RowType.Water,
         };
     }
