@@ -59,7 +59,7 @@ public class SingleRowObstacleSpawner : MonoBehaviour
         ResetObstacles();
     }
 
-    private void Update()
+    private void FixedUpdate() //A for loop inside an update tick can become unoptimized over time. //Omar
     {
         UpdateObstacles();
     }
