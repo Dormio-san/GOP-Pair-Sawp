@@ -36,7 +36,11 @@ public class GameOverUI : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             canvasGroup.alpha = Mathf.Clamp01(elapsedTime / fadeDuration);
-            yield return null;
+
+            if (Input.anyKeyDown) //Allows the player to skip the fade in timer 
+                elapsedTime = fadeDuration;
+
+            else yield return null;
         }
 
         // Set the canvas group to be fully visible and interactable
