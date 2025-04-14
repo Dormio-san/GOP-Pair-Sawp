@@ -70,6 +70,7 @@ public class WorldRowManager : MonoBehaviour
         // Get a row from the pooler and set its position
         GameObject row = pooler.GetRow(type);
         row.transform.position = new Vector3(0.5f, y + 0.5f, 0);
+        row.transform.SetParent(this.transform); //Made rows a child object of this transform to help the workflow when developing //Omar
         activeRows.Add(new RowInfo { y = y, type = type, row = row });
 
         // If row is water, add it to the waterRowYPositions HashSet
