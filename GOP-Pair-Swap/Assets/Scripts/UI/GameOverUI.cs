@@ -71,6 +71,15 @@ public class GameOverUI : MonoBehaviour
         SceneManager.LoadScene(currentScene.name);
     }
 
+    public void MainMenu()
+    {
+        // Resume the game time
+        Time.timeScale = 1f;
+
+        // Load the main menu scene
+        SceneManager.LoadScene("MainMenu");
+    }
+
     // Stop jaywalking
     public void QuitJaywalking()
     {

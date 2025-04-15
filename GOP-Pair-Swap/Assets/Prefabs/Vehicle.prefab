@@ -130,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
 --- !u!114 &5920057327339251070
 MonoBehaviour:
@@ -166,4 +166,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3becb5b77f87cd459caa13d3fb19949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 5110707265285500796, guid: 1463e65420a20b44680e1fe8e1903cd9, type: 3}
