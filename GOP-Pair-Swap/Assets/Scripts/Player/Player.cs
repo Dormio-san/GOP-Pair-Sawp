@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
         if (direction != Vector2.zero)
         {
             targetPosition = transform.position + (Vector3)direction;
-
+            SFXManager.Instance.PlayerMove();
             // If player goes off the left side of the screen, wrap around to the right
             if (targetPosition.x < minX)
             {
@@ -187,6 +187,7 @@ public class Player : MonoBehaviour
         rb2D.simulated = false; // Disable simulation of the rigidbody to prevent physics interactions
         canMove = false; // Disable player movement
         yield return new WaitForSeconds(drownDelay); // Wait for a short delay before drowning
+        SFXManager.Instance.WaterDeath();
         GameManager.Instance.GameOver(); // Call the Game Over function
     }
 

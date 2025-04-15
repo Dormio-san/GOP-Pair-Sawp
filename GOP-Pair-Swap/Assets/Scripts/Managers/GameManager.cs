@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
         // Set the reference to the pause UI script
         pauseUIScript = pauseUI.GetComponent<PauseUI>();
-
+        
         // By default, make the cursor invisible and lock it to the game window
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -39,11 +39,13 @@ public class GameManager : MonoBehaviour
             {
                 // If the game is not paused, pause it
                 PauseGame();
+                BGMManager.Instance.lowerVolume();
             }
             else
             {
                 // If the game is paused, resume it
                 pauseUIScript.ResumeGame();
+                BGMManager.Instance.RaiseVolume();
             }
         }
     }
@@ -52,6 +54,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverUI.ShowGameOverUI();
+        BGMManager.Instance.lowerVolume();
     }
 
     // Called when the game is paused
