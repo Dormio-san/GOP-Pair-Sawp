@@ -39,7 +39,7 @@ public class WorldRowManager : MonoBehaviour
         currentTopRowY = rowsAhead;
     }
 
-    private void FixedUpdate() //Changed to Fixed Update as the player isnt moving that fast to warrant using normal Update //Omar
+    public void RowSpawnCheck() //Changed to Fixed Update as the player isnt moving that fast to warrant using normal Update //Omar
     {
         // Get the player current Y position and use it to calculate if we need to spawn or remove rows
         int playerRowY = Mathf.FloorToInt(player.position.y);

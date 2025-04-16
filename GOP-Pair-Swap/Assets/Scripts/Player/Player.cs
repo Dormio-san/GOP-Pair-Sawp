@@ -63,6 +63,7 @@ public class Player : MonoBehaviour
         {
             targetPosition = transform.position + (Vector3)direction;
             SFXManager.Instance.PlayerMove();
+            WorldRowManager.Instance.RowSpawnCheck();
             // If player goes off the left side of the screen, wrap around to the right
             if (targetPosition.x < minX)
             {
